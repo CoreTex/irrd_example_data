@@ -1,0 +1,60 @@
+override:        irrd
+
+mntner:          MNT-AS400
+descr:           AS400 Maintainer
+admin-c:         AS400-EA
+upd-to:          admin@example.com
+remarks:         *************************************
+remarks:         * Maintainer Password: mvutnfkqullg *
+remarks:         *************************************
+auth:            MD5-PW $1$.Vnl$bv5oWBS04FCDWgkcEeuCI0
+mnt-by:          MNT-AS400
+source:          MYDB
+
+person:          Example Administrator
+address:         Street Name 1
+address:         12345 City
+address:         GERMANY
+mnt-by:          MNT-AS400
+phone:           +49691234567
+e-mail:          admin@example.com
+nic-hdl:         AS400-EA
+source:          MYDB
+
+aut-num:         AS400
+as-name:         Customer400-AS 
+descr:           AS400: Single-Homed without Behind-AS
+remarks:         ***********************************
+remarks:         * Upstreams                       *
+remarks:         ***********************************
+import:          from AS8000 accept ANY
+export:          to AS8000 announce AS400:AS-BEHIND
+remarks:         ***********************************
+remarks:         * Downstreams                     *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * Peers                           *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * END                             *
+remarks:         ***********************************
+admin-c:         AS400-EA
+tech-c:          AS400-EA
+mnt-by:          MNT-AS400
+source:          MYDB
+
+as-set:          AS400:AS-ROAMING
+descr:           Customer AS400 Roaming Partner
+admin-c:         AS400-EA
+tech-c:          AS400-EA
+members:         AS200
+mnt-by:          MNT-AS400
+source:          MYDB
+
+as-set:          AS400:AS-BEHIND
+descr:           Customer AS400 Behind-ASN list
+admin-c:         AS400-EA
+tech-c:          AS400-EA
+mnt-by:          MNT-AS400
+members:         AS400
+source:          MYDB

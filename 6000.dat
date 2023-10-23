@@ -1,0 +1,60 @@
+override:        irrd
+
+mntner:          MNT-AS6000
+descr:           AS6000 Maintainer
+admin-c:         AS6000-EA
+upd-to:          admin@example.com
+remarks:         *************************************
+remarks:         * Maintainer Password: wtflxxbhwfsa *
+remarks:         *************************************
+auth:            MD5-PW $1$gQ9I$eskzl2iJ9DWmkO7hAV/Q3/
+mnt-by:          MNT-AS6000
+source:          MYDB
+
+person:          Example Administrator
+address:         Street Name 1
+address:         12345 City
+address:         GERMANY
+mnt-by:          MNT-AS6000
+phone:           +49691234567
+e-mail:          admin@example.com
+nic-hdl:         AS6000-EA
+source:          MYDB
+
+aut-num:         AS6000
+as-name:         Customer6000-AS 
+remarks:         ***********************************
+remarks:         * Upstreams                       *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * Downstreams                     *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * Peers                           *
+remarks:         ***********************************
+import:          from AS7000 accept AS7000:AS-BEHIND
+export:          to AS7000 announce AS6000:AS-BEHIND
+import:          from AS20936 accept AS20936:AS-BEHIND
+export:          to AS20936 announce AS6000:AS-BEHIND
+remarks:         ***********************************
+remarks:         * END                             *
+remarks:         ***********************************
+admin-c:         AS6000-EA
+tech-c:          AS6000-EA
+mnt-by:          MNT-AS6000
+source:          MYDB
+
+as-set:          AS6000:AS-ROAMING
+descr:           Customer AS6000 Roaming Partner
+admin-c:         AS6000-EA
+tech-c:          AS6000-EA
+mnt-by:          MNT-AS6000
+source:          MYDB
+
+as-set:          AS6000:AS-BEHIND
+descr:           Customer AS6000 Behind-ASN list
+admin-c:         AS6000-EA
+tech-c:          AS6000-EA
+mnt-by:          MNT-AS6000
+members:         AS6000
+source:          MYDB

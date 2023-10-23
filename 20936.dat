@@ -1,0 +1,86 @@
+override:        irrd
+
+mntner:          MNT-AS20936
+descr:           AS20936 Maintainer
+admin-c:         AS20936-EA
+upd-to:          admin@example.com
+remarks:         *************************************
+remarks:         * Maintainer Password: lmcwcsmkgqor *
+remarks:         *************************************
+auth:            MD5-PW $1$jn3l$61g5T/5B854atc/1uAof/0
+mnt-by:          MNT-AS20936
+source:          MYDB
+
+person:          Example Administrator
+address:         Street Name 1
+address:         12345 City
+address:         GERMANY
+mnt-by:          MNT-AS20936
+phone:           +49691234567
+e-mail:          admin@example.com
+nic-hdl:         AS20936-EA
+source:          MYDB
+
+aut-num:         AS20936
+as-name:         Customer20936-AS 
+remarks:         ***********************************
+remarks:         * Upstreams                       *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * Downstreams                     *
+remarks:         ***********************************
+import:          from AS5000 accept AS5000:AS-BEHIND
+export:          to AS5000 announce ANY
+import:          from AS4000 accept AS4000:AS-BEHIND
+export:          to AS4000 announce ANY
+import:          from AS3000 accept AS3000:AS-BEHIND
+export:          to AS3000 announce ANY
+import:          from AS2000 accept AS2000:AS-BEHIND
+export:          to AS2000 announce ANY
+import:          from AS1000 accept AS1000:AS-BEHIND
+export:          to AS1000 announce ANY
+remarks:         ***********************************
+remarks:         * Peers                           *
+remarks:         ***********************************
+import:          from AS10000 accept AS10000:AS-BEHIND
+export:          to AS10000 announce AS20936:AS-BEHIND
+import:          from AS9000 accept AS9000:AS-BEHIND
+export:          to AS9000 announce AS20936:AS-BEHIND
+import:          from AS8000 accept AS8000:AS-BEHIND
+export:          to AS8000 announce AS20936:AS-BEHIND
+import:          from AS7000 accept AS7000:AS-BEHIND
+export:          to AS7000 announce AS20936:AS-BEHIND
+import:          from AS6000 accept AS6000:AS-BEHIND
+export:          to AS6000 announce AS20936:AS-BEHIND
+remarks:         ***********************************
+remarks:         * END                             *
+remarks:         ***********************************
+admin-c:         AS20936-EA
+tech-c:          AS20936-EA
+mnt-by:          MNT-AS20936
+source:          MYDB
+
+as-set:          AS20936:AS-ROAMING
+descr:           Customer AS20936 Roaming Partner
+admin-c:         AS20936-EA
+tech-c:          AS20936-EA
+mnt-by:          MNT-AS20936
+source:          MYDB
+
+as-set:          AS20936:AS-BEHIND
+descr:           Customer AS20936 Behind-ASN list
+admin-c:         AS20936-EA
+tech-c:          AS20936-EA
+mnt-by:          MNT-AS20936
+members:         AS20936
+members:         AS5000
+members:         AS5000:AS-BEHIND
+members:         AS4000
+members:         AS4000:AS-BEHIND
+members:         AS3000
+members:         AS3000:AS-BEHIND
+members:         AS2000
+members:         AS2000:AS-BEHIND
+members:         AS1000
+members:         AS1000:AS-BEHIND
+source:          MYDB

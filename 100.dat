@@ -1,0 +1,60 @@
+override:        irrd
+
+mntner:          MNT-AS100
+descr:           AS100 Maintainer
+admin-c:         AS100-EA
+upd-to:          admin@example.com
+remarks:         *************************************
+remarks:         * Maintainer Password: lgpythroyczv *
+remarks:         *************************************
+auth:            MD5-PW $1$hKpi$FGp9mDo4uo0niAsRhcIN5/
+mnt-by:          MNT-AS100
+source:          MYDB
+
+person:          Example Administrator
+address:         Street Name 1
+address:         12345 City
+address:         GERMANY
+mnt-by:          MNT-AS100
+phone:           +49691234567
+e-mail:          admin@example.com
+nic-hdl:         AS100-EA
+source:          MYDB
+
+aut-num:         AS100
+as-name:         Customer100-AS 
+descr:           AS100: Single-Homed without Behind-AS
+remarks:         ***********************************
+remarks:         * Upstreams                       *
+remarks:         ***********************************
+import:          from AS4000 accept ANY
+export:          to AS4000 announce AS100:AS-BEHIND
+remarks:         ***********************************
+remarks:         * Downstreams                     *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * Peers                           *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * END                             *
+remarks:         ***********************************
+admin-c:         AS100-EA
+tech-c:          AS100-EA
+mnt-by:          MNT-AS100
+source:          MYDB
+
+as-set:          AS100:AS-ROAMING
+descr:           Customer AS100 Roaming Partner
+admin-c:         AS100-EA
+tech-c:          AS100-EA
+members:         AS60000
+mnt-by:          MNT-AS100
+source:          MYDB
+
+as-set:          AS100:AS-BEHIND
+descr:           Customer AS100 Behind-ASN list
+admin-c:         AS100-EA
+tech-c:          AS100-EA
+mnt-by:          MNT-AS100
+members:         AS100
+source:          MYDB

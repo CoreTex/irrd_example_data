@@ -1,0 +1,62 @@
+override:        irrd
+
+mntner:          MNT-AS9000
+descr:           AS9000 Maintainer
+admin-c:         AS9000-EA
+upd-to:          admin@example.com
+remarks:         *************************************
+remarks:         * Maintainer Password: rbiucungashn *
+remarks:         *************************************
+auth:            MD5-PW $1$GWTB$wOXWrwIouzn2zuPFZ41l6/
+mnt-by:          MNT-AS9000
+source:          MYDB
+
+person:          Example Administrator
+address:         Street Name 1
+address:         12345 City
+address:         GERMANY
+mnt-by:          MNT-AS9000
+phone:           +49691234567
+e-mail:          admin@example.com
+nic-hdl:         AS9000-EA
+source:          MYDB
+
+aut-num:         AS9000
+as-name:         Customer9000-AS 
+remarks:         ***********************************
+remarks:         * Upstreams                       *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * Downstreams                     *
+remarks:         ***********************************
+import:          from AS60000 accept AS60000:AS-BEHIND
+export:          to AS60000 announce ANY
+remarks:         ***********************************
+remarks:         * Peers                           *
+remarks:         ***********************************
+import:          from AS20936 accept AS20936:AS-BEHIND
+export:          to AS20936 announce AS9000:AS-BEHIND
+remarks:         ***********************************
+remarks:         * END                             *
+remarks:         ***********************************
+admin-c:         AS9000-EA
+tech-c:          AS9000-EA
+mnt-by:          MNT-AS9000
+source:          MYDB
+
+as-set:          AS9000:AS-ROAMING
+descr:           Customer AS9000 Roaming Partner
+admin-c:         AS9000-EA
+tech-c:          AS9000-EA
+mnt-by:          MNT-AS9000
+source:          MYDB
+
+as-set:          AS9000:AS-BEHIND
+descr:           Customer AS9000 Behind-ASN list
+admin-c:         AS9000-EA
+tech-c:          AS9000-EA
+mnt-by:          MNT-AS9000
+members:         AS9000
+members:         AS60000
+members:         AS60000:AS-BEHIND
+source:          MYDB

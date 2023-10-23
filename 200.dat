@@ -1,0 +1,61 @@
+override:        irrd
+
+mntner:          MNT-AS200
+descr:           AS200 Maintainer
+admin-c:         AS200-EA
+upd-to:          admin@example.com
+remarks:         *************************************
+remarks:         * Maintainer Password: zvbekypbrxgu *
+remarks:         *************************************
+auth:            MD5-PW $1$xt5M$a1EX/e8KWNlO1W/K3uuvV1
+mnt-by:          MNT-AS200
+source:          MYDB
+
+person:          Example Administrator
+address:         Street Name 1
+address:         12345 City
+address:         GERMANY
+mnt-by:          MNT-AS200
+phone:           +49691234567
+e-mail:          admin@example.com
+nic-hdl:         AS200-EA
+source:          MYDB
+
+aut-num:         AS200
+as-name:         Customer200-AS 
+descr:           AS200: Single-Homed without Behind-AS
+remarks:         ***********************************
+remarks:         * Upstreams                       *
+remarks:         ***********************************
+import:          from AS4000 accept ANY
+export:          to AS4000 announce AS200:AS-BEHIND
+remarks:         ***********************************
+remarks:         * Downstreams                     *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * Peers                           *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * END                             *
+remarks:         ***********************************
+admin-c:         AS200-EA
+tech-c:          AS200-EA
+mnt-by:          MNT-AS200
+source:          MYDB
+
+as-set:          AS200:AS-ROAMING
+descr:           Customer AS200 Roaming Partner
+admin-c:         AS200-EA
+tech-c:          AS200-EA
+members:         AS400
+members:         AS500
+mnt-by:          MNT-AS200
+source:          MYDB
+
+as-set:          AS200:AS-BEHIND
+descr:           Customer AS200 Behind-ASN list
+admin-c:         AS200-EA
+tech-c:          AS200-EA
+mnt-by:          MNT-AS200
+members:         AS200
+source:          MYDB

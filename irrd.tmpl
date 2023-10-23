@@ -1,0 +1,89 @@
+override:        irrd
+
+mntner:          MNT-AS{{asn}}
+descr:           AS{{asn}} Maintainer
+admin-c:         AS{{asn}}-EA
+upd-to:          admin@example.com
+remarks:         *************************************
+remarks:         * Maintainer Password: {{config['password']}} *
+remarks:         *************************************
+auth:            MD5-PW {{config['password_hashed']}}
+mnt-by:          MNT-AS{{asn}}
+source:          MYDB
+
+person:          Example Administrator
+address:         Street Name 1
+address:         12345 City
+address:         GERMANY
+mnt-by:          MNT-AS{{asn}}
+phone:           +49691234567
+e-mail:          admin@example.com
+nic-hdl:         AS{{asn}}-EA
+source:          MYDB
+
+aut-num:         AS{{asn}}
+as-name:         Customer{{asn}}-AS 
+{% if ( (config['upstreams']|length == 1) and (config['downstreams']|length > 0) ) -%}
+descr:           AS{{asn}}: Single-Homed with Behind-AS
+{% endif -%}
+{% if ( (config['upstreams']|length == 1) and (config['downstreams']|length == 0) ) -%}
+descr:           AS{{asn}}: Single-Homed without Behind-AS
+{% endif -%}
+{% if ( (config['upstreams']|length > 1) and (config['downstreams']|length > 0) ) -%}
+descr:           AS{{asn}}: Multi-Homed with Behind-AS
+{% endif -%}
+{% if ( (config['upstreams']|length > 1) and (config['downstreams']|length == 0) ) -%}
+descr:           AS{{asn}}: Multi-Homed without Behind-AS
+{% endif -%}
+{% if ( (config['upstreams']|length == 0) and (config['peerings']|length > 0) ) -%}
+descr:           AS{{asn}}: Tier1 Carrier without Upstreams
+{% endif -%}
+remarks:         ***********************************
+remarks:         * Upstreams                       *
+remarks:         ***********************************
+{% for upstream in config['upstreams'] -%}
+import:          from AS{{upstream}} accept ANY
+export:          to AS{{upstream}} announce AS{{asn}}:AS-BEHIND
+{% endfor -%}
+remarks:         ***********************************
+remarks:         * Downstreams                     *
+remarks:         ***********************************
+{% for downstream in config['downstreams'] -%}
+import:          from AS{{downstream}} accept AS{{downstream}}:AS-BEHIND
+export:          to AS{{downstream}} announce ANY
+{% endfor -%}
+remarks:         ***********************************
+remarks:         * Peers                           *
+remarks:         ***********************************
+{% for peer in config['peers'] -%}
+import:          from AS{{peer}} accept AS{{peer}}:AS-BEHIND
+export:          to AS{{peer}} announce AS{{asn}}:AS-BEHIND
+{% endfor -%}
+remarks:         ***********************************
+remarks:         * END                             *
+remarks:         ***********************************
+admin-c:         AS{{asn}}-EA
+tech-c:          AS{{asn}}-EA
+mnt-by:          MNT-AS{{asn}}
+source:          MYDB
+
+as-set:          AS{{asn}}:AS-ROAMING
+descr:           Customer AS{{asn}} Roaming Partner
+admin-c:         AS{{asn}}-EA
+tech-c:          AS{{asn}}-EA
+{%- for roaming in config['roamings'] %}
+members:         AS{{roaming}}{% endfor %}
+mnt-by:          MNT-AS{{asn}}
+source:          MYDB
+
+as-set:          AS{{asn}}:AS-BEHIND
+descr:           Customer AS{{asn}} Behind-ASN list
+admin-c:         AS{{asn}}-EA
+tech-c:          AS{{asn}}-EA
+mnt-by:          MNT-AS{{asn}}
+members:         AS{{asn}}
+{%- for downstream in config['downstreams'] %}
+members:         AS{{downstream}}
+members:         AS{{downstream}}:AS-BEHIND{% endfor %}
+source:          MYDB
+

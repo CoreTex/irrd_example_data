@@ -1,0 +1,61 @@
+override:        irrd
+
+mntner:          MNT-AS600
+descr:           AS600 Maintainer
+admin-c:         AS600-EA
+upd-to:          admin@example.com
+remarks:         *************************************
+remarks:         * Maintainer Password: txwfpcqjucmh *
+remarks:         *************************************
+auth:            MD5-PW $1$iBSR$jJFmViIY0.FxdiBhNpUKG/
+mnt-by:          MNT-AS600
+source:          MYDB
+
+person:          Example Administrator
+address:         Street Name 1
+address:         12345 City
+address:         GERMANY
+mnt-by:          MNT-AS600
+phone:           +49691234567
+e-mail:          admin@example.com
+nic-hdl:         AS600-EA
+source:          MYDB
+
+aut-num:         AS600
+as-name:         Customer600-AS 
+descr:           AS600: Single-Homed without Behind-AS
+remarks:         ***********************************
+remarks:         * Upstreams                       *
+remarks:         ***********************************
+import:          from AS60000 accept ANY
+export:          to AS60000 announce AS600:AS-BEHIND
+remarks:         ***********************************
+remarks:         * Downstreams                     *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * Peers                           *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * END                             *
+remarks:         ***********************************
+admin-c:         AS600-EA
+tech-c:          AS600-EA
+mnt-by:          MNT-AS600
+source:          MYDB
+
+as-set:          AS600:AS-ROAMING
+descr:           Customer AS600 Roaming Partner
+admin-c:         AS600-EA
+tech-c:          AS600-EA
+members:         AS100
+members:         AS200
+mnt-by:          MNT-AS600
+source:          MYDB
+
+as-set:          AS600:AS-BEHIND
+descr:           Customer AS600 Behind-ASN list
+admin-c:         AS600-EA
+tech-c:          AS600-EA
+mnt-by:          MNT-AS600
+members:         AS600
+source:          MYDB

@@ -1,0 +1,66 @@
+override:        irrd
+
+mntner:          MNT-AS8000
+descr:           AS8000 Maintainer
+admin-c:         AS8000-EA
+upd-to:          admin@example.com
+remarks:         *************************************
+remarks:         * Maintainer Password: zimmoijtlnjs *
+remarks:         *************************************
+auth:            MD5-PW $1$ntCE$u2m6FL7t5vy4IueXllKmV1
+mnt-by:          MNT-AS8000
+source:          MYDB
+
+person:          Example Administrator
+address:         Street Name 1
+address:         12345 City
+address:         GERMANY
+mnt-by:          MNT-AS8000
+phone:           +49691234567
+e-mail:          admin@example.com
+nic-hdl:         AS8000-EA
+source:          MYDB
+
+aut-num:         AS8000
+as-name:         Customer8000-AS 
+remarks:         ***********************************
+remarks:         * Upstreams                       *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * Downstreams                     *
+remarks:         ***********************************
+import:          from AS300 accept AS300:AS-BEHIND
+export:          to AS300 announce ANY
+import:          from AS400 accept AS400:AS-BEHIND
+export:          to AS400 announce ANY
+remarks:         ***********************************
+remarks:         * Peers                           *
+remarks:         ***********************************
+import:          from AS20936 accept AS20936:AS-BEHIND
+export:          to AS20936 announce AS8000:AS-BEHIND
+remarks:         ***********************************
+remarks:         * END                             *
+remarks:         ***********************************
+admin-c:         AS8000-EA
+tech-c:          AS8000-EA
+mnt-by:          MNT-AS8000
+source:          MYDB
+
+as-set:          AS8000:AS-ROAMING
+descr:           Customer AS8000 Roaming Partner
+admin-c:         AS8000-EA
+tech-c:          AS8000-EA
+mnt-by:          MNT-AS8000
+source:          MYDB
+
+as-set:          AS8000:AS-BEHIND
+descr:           Customer AS8000 Behind-ASN list
+admin-c:         AS8000-EA
+tech-c:          AS8000-EA
+mnt-by:          MNT-AS8000
+members:         AS8000
+members:         AS300
+members:         AS300:AS-BEHIND
+members:         AS400
+members:         AS400:AS-BEHIND
+source:          MYDB

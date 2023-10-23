@@ -1,0 +1,61 @@
+override:        irrd
+
+mntner:          MNT-AS500
+descr:           AS500 Maintainer
+admin-c:         AS500-EA
+upd-to:          admin@example.com
+remarks:         *************************************
+remarks:         * Maintainer Password: cycsxkunfjvk *
+remarks:         *************************************
+auth:            MD5-PW $1$s2JL$krKSLftyhMcWmrRdlDh7I1
+mnt-by:          MNT-AS500
+source:          MYDB
+
+person:          Example Administrator
+address:         Street Name 1
+address:         12345 City
+address:         GERMANY
+mnt-by:          MNT-AS500
+phone:           +49691234567
+e-mail:          admin@example.com
+nic-hdl:         AS500-EA
+source:          MYDB
+
+aut-num:         AS500
+as-name:         Customer500-AS 
+descr:           AS500: Single-Homed without Behind-AS
+remarks:         ***********************************
+remarks:         * Upstreams                       *
+remarks:         ***********************************
+import:          from AS60000 accept ANY
+export:          to AS60000 announce AS500:AS-BEHIND
+remarks:         ***********************************
+remarks:         * Downstreams                     *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * Peers                           *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * END                             *
+remarks:         ***********************************
+admin-c:         AS500-EA
+tech-c:          AS500-EA
+mnt-by:          MNT-AS500
+source:          MYDB
+
+as-set:          AS500:AS-ROAMING
+descr:           Customer AS500 Roaming Partner
+admin-c:         AS500-EA
+tech-c:          AS500-EA
+members:         AS100
+members:         AS200
+mnt-by:          MNT-AS500
+source:          MYDB
+
+as-set:          AS500:AS-BEHIND
+descr:           Customer AS500 Behind-ASN list
+admin-c:         AS500-EA
+tech-c:          AS500-EA
+mnt-by:          MNT-AS500
+members:         AS500
+source:          MYDB

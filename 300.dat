@@ -1,0 +1,60 @@
+override:        irrd
+
+mntner:          MNT-AS300
+descr:           AS300 Maintainer
+admin-c:         AS300-EA
+upd-to:          admin@example.com
+remarks:         *************************************
+remarks:         * Maintainer Password: zmctbzxlmavs *
+remarks:         *************************************
+auth:            MD5-PW $1$cqRX$5.vU4H495SxLWeC4yFMCf.
+mnt-by:          MNT-AS300
+source:          MYDB
+
+person:          Example Administrator
+address:         Street Name 1
+address:         12345 City
+address:         GERMANY
+mnt-by:          MNT-AS300
+phone:           +49691234567
+e-mail:          admin@example.com
+nic-hdl:         AS300-EA
+source:          MYDB
+
+aut-num:         AS300
+as-name:         Customer300-AS 
+descr:           AS300: Single-Homed without Behind-AS
+remarks:         ***********************************
+remarks:         * Upstreams                       *
+remarks:         ***********************************
+import:          from AS8000 accept ANY
+export:          to AS8000 announce AS300:AS-BEHIND
+remarks:         ***********************************
+remarks:         * Downstreams                     *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * Peers                           *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * END                             *
+remarks:         ***********************************
+admin-c:         AS300-EA
+tech-c:          AS300-EA
+mnt-by:          MNT-AS300
+source:          MYDB
+
+as-set:          AS300:AS-ROAMING
+descr:           Customer AS300 Roaming Partner
+admin-c:         AS300-EA
+tech-c:          AS300-EA
+members:         AS100
+mnt-by:          MNT-AS300
+source:          MYDB
+
+as-set:          AS300:AS-BEHIND
+descr:           Customer AS300 Behind-ASN list
+admin-c:         AS300-EA
+tech-c:          AS300-EA
+mnt-by:          MNT-AS300
+members:         AS300
+source:          MYDB

@@ -1,0 +1,67 @@
+override:        irrd
+
+mntner:          MNT-AS4000
+descr:           AS4000 Maintainer
+admin-c:         AS4000-EA
+upd-to:          admin@example.com
+remarks:         *************************************
+remarks:         * Maintainer Password: zkxowuyzbhke *
+remarks:         *************************************
+auth:            MD5-PW $1$wy4E$jUTLXwxMB2BSVqiv2T/CO/
+mnt-by:          MNT-AS4000
+source:          MYDB
+
+person:          Example Administrator
+address:         Street Name 1
+address:         12345 City
+address:         GERMANY
+mnt-by:          MNT-AS4000
+phone:           +49691234567
+e-mail:          admin@example.com
+nic-hdl:         AS4000-EA
+source:          MYDB
+
+aut-num:         AS4000
+as-name:         Customer4000-AS 
+descr:           AS4000: Single-Homed with Behind-AS
+remarks:         ***********************************
+remarks:         * Upstreams                       *
+remarks:         ***********************************
+import:          from AS20936 accept ANY
+export:          to AS20936 announce AS4000:AS-BEHIND
+remarks:         ***********************************
+remarks:         * Downstreams                     *
+remarks:         ***********************************
+import:          from AS100 accept AS100:AS-BEHIND
+export:          to AS100 announce ANY
+import:          from AS200 accept AS200:AS-BEHIND
+export:          to AS200 announce ANY
+remarks:         ***********************************
+remarks:         * Peers                           *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * END                             *
+remarks:         ***********************************
+admin-c:         AS4000-EA
+tech-c:          AS4000-EA
+mnt-by:          MNT-AS4000
+source:          MYDB
+
+as-set:          AS4000:AS-ROAMING
+descr:           Customer AS4000 Roaming Partner
+admin-c:         AS4000-EA
+tech-c:          AS4000-EA
+mnt-by:          MNT-AS4000
+source:          MYDB
+
+as-set:          AS4000:AS-BEHIND
+descr:           Customer AS4000 Behind-ASN list
+admin-c:         AS4000-EA
+tech-c:          AS4000-EA
+mnt-by:          MNT-AS4000
+members:         AS4000
+members:         AS100
+members:         AS100:AS-BEHIND
+members:         AS200
+members:         AS200:AS-BEHIND
+source:          MYDB

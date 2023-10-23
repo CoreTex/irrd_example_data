@@ -1,0 +1,59 @@
+override:        irrd
+
+mntner:          MNT-AS3000
+descr:           AS3000 Maintainer
+admin-c:         AS3000-EA
+upd-to:          admin@example.com
+remarks:         *************************************
+remarks:         * Maintainer Password: mygdnfndazsd *
+remarks:         *************************************
+auth:            MD5-PW $1$JWqB$gqNkWiPtuJTVTBgGZbikT1
+mnt-by:          MNT-AS3000
+source:          MYDB
+
+person:          Example Administrator
+address:         Street Name 1
+address:         12345 City
+address:         GERMANY
+mnt-by:          MNT-AS3000
+phone:           +49691234567
+e-mail:          admin@example.com
+nic-hdl:         AS3000-EA
+source:          MYDB
+
+aut-num:         AS3000
+as-name:         Customer3000-AS 
+descr:           AS3000: Single-Homed without Behind-AS
+remarks:         ***********************************
+remarks:         * Upstreams                       *
+remarks:         ***********************************
+import:          from AS20936 accept ANY
+export:          to AS20936 announce AS3000:AS-BEHIND
+remarks:         ***********************************
+remarks:         * Downstreams                     *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * Peers                           *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * END                             *
+remarks:         ***********************************
+admin-c:         AS3000-EA
+tech-c:          AS3000-EA
+mnt-by:          MNT-AS3000
+source:          MYDB
+
+as-set:          AS3000:AS-ROAMING
+descr:           Customer AS3000 Roaming Partner
+admin-c:         AS3000-EA
+tech-c:          AS3000-EA
+mnt-by:          MNT-AS3000
+source:          MYDB
+
+as-set:          AS3000:AS-BEHIND
+descr:           Customer AS3000 Behind-ASN list
+admin-c:         AS3000-EA
+tech-c:          AS3000-EA
+mnt-by:          MNT-AS3000
+members:         AS3000
+source:          MYDB

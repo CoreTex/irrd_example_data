@@ -1,0 +1,63 @@
+override:        irrd
+
+mntner:          MNT-AS5000
+descr:           AS5000 Maintainer
+admin-c:         AS5000-EA
+upd-to:          admin@example.com
+remarks:         *************************************
+remarks:         * Maintainer Password: mrvjwgyjbrit *
+remarks:         *************************************
+auth:            MD5-PW $1$BYlS$mtSGunTV.Jrf1wVZAm1A21
+mnt-by:          MNT-AS5000
+source:          MYDB
+
+person:          Example Administrator
+address:         Street Name 1
+address:         12345 City
+address:         GERMANY
+mnt-by:          MNT-AS5000
+phone:           +49691234567
+e-mail:          admin@example.com
+nic-hdl:         AS5000-EA
+source:          MYDB
+
+aut-num:         AS5000
+as-name:         Customer5000-AS 
+descr:           AS5000: Single-Homed without Behind-AS
+remarks:         ***********************************
+remarks:         * Upstreams                       *
+remarks:         ***********************************
+import:          from AS20936 accept ANY
+export:          to AS20936 announce AS5000:AS-BEHIND
+remarks:         ***********************************
+remarks:         * Downstreams                     *
+remarks:         ***********************************
+remarks:         ***********************************
+remarks:         * Peers                           *
+remarks:         ***********************************
+import:          from AS6000 accept AS6000:AS-BEHIND
+export:          to AS6000 announce AS5000:AS-BEHIND
+import:          from AS20936 accept AS20936:AS-BEHIND
+export:          to AS20936 announce AS5000:AS-BEHIND
+remarks:         ***********************************
+remarks:         * END                             *
+remarks:         ***********************************
+admin-c:         AS5000-EA
+tech-c:          AS5000-EA
+mnt-by:          MNT-AS5000
+source:          MYDB
+
+as-set:          AS5000:AS-ROAMING
+descr:           Customer AS5000 Roaming Partner
+admin-c:         AS5000-EA
+tech-c:          AS5000-EA
+mnt-by:          MNT-AS5000
+source:          MYDB
+
+as-set:          AS5000:AS-BEHIND
+descr:           Customer AS5000 Behind-ASN list
+admin-c:         AS5000-EA
+tech-c:          AS5000-EA
+mnt-by:          MNT-AS5000
+members:         AS5000
+source:          MYDB
