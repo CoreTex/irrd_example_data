@@ -5,9 +5,9 @@ descr:           AS600 Maintainer
 admin-c:         AS600-EA
 upd-to:          admin@example.com
 remarks:         *************************************
-remarks:         * Maintainer Password: txwfpcqjucmh *
+remarks:         * Maintainer Password: nnlapgorwoqj *
 remarks:         *************************************
-auth:            MD5-PW $1$iBSR$jJFmViIY0.FxdiBhNpUKG/
+auth:            MD5-PW $1$6PNM$a2rNnBBTaPmQrJGWHpeVH/
 mnt-by:          MNT-AS600
 source:          MYDB
 
@@ -22,7 +22,7 @@ nic-hdl:         AS600-EA
 source:          MYDB
 
 aut-num:         AS600
-as-name:         Customer600-AS 
+as-name:         ANY_NAME_FOR_AS-600 
 descr:           AS600: Single-Homed without Behind-AS
 remarks:         ***********************************
 remarks:         * Upstreams                       *

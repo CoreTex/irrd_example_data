@@ -5,9 +5,9 @@ descr:           AS100 Maintainer
 admin-c:         AS100-EA
 upd-to:          admin@example.com
 remarks:         *************************************
-remarks:         * Maintainer Password: lgpythroyczv *
+remarks:         * Maintainer Password: gyokrevelkix *
 remarks:         *************************************
-auth:            MD5-PW $1$hKpi$FGp9mDo4uo0niAsRhcIN5/
+auth:            MD5-PW $1$Le21$WG7T13Jfvb25ZMIVINjVj1
 mnt-by:          MNT-AS100
 source:          MYDB
 
@@ -22,7 +22,7 @@ nic-hdl:         AS100-EA
 source:          MYDB
 
 aut-num:         AS100
-as-name:         Customer100-AS 
+as-name:         ANY_NAME_FOR_AS-100 
 descr:           AS100: Single-Homed without Behind-AS
 remarks:         ***********************************
 remarks:         * Upstreams                       *

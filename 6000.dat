@@ -5,9 +5,9 @@ descr:           AS6000 Maintainer
 admin-c:         AS6000-EA
 upd-to:          admin@example.com
 remarks:         *************************************
-remarks:         * Maintainer Password: wtflxxbhwfsa *
+remarks:         * Maintainer Password: nlccqdhuurvc *
 remarks:         *************************************
-auth:            MD5-PW $1$gQ9I$eskzl2iJ9DWmkO7hAV/Q3/
+auth:            MD5-PW $1$gRE2$WwkCfTAB33wASfU69WWXe1
 mnt-by:          MNT-AS6000
 source:          MYDB
 
@@ -22,7 +22,7 @@ nic-hdl:         AS6000-EA
 source:          MYDB
 
 aut-num:         AS6000
-as-name:         Customer6000-AS 
+as-name:         ANY_NAME_FOR_AS-6000 
 remarks:         ***********************************
 remarks:         * Upstreams                       *
 remarks:         ***********************************

@@ -22,7 +22,7 @@ nic-hdl:         AS{{asn}}-EA
 source:          MYDB
 
 aut-num:         AS{{asn}}
-as-name:         Customer{{asn}}-AS 
+as-name:         ANY_NAME_FOR_AS-{{asn}} 
 {% if ( (config['upstreams']|length == 1) and (config['downstreams']|length > 0) ) -%}
 descr:           AS{{asn}}: Single-Homed with Behind-AS
 {% endif -%}
@@ -35,7 +35,7 @@ descr:           AS{{asn}}: Multi-Homed with Behind-AS
 {% if ( (config['upstreams']|length > 1) and (config['downstreams']|length == 0) ) -%}
 descr:           AS{{asn}}: Multi-Homed without Behind-AS
 {% endif -%}
-{% if ( (config['upstreams']|length == 0) and (config['peerings']|length > 0) ) -%}
+{% if ( (config['upstreams']|length < 1) and (config['peerings']|length > 0) ) -%}
 descr:           AS{{asn}}: Tier1 Carrier without Upstreams
 {% endif -%}
 remarks:         ***********************************

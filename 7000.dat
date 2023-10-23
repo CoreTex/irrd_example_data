@@ -5,9 +5,9 @@ descr:           AS7000 Maintainer
 admin-c:         AS7000-EA
 upd-to:          admin@example.com
 remarks:         *************************************
-remarks:         * Maintainer Password: csodmnbmkhgy *
+remarks:         * Maintainer Password: tdbwdiufjhoy *
 remarks:         *************************************
-auth:            MD5-PW $1$hJoG$ADFr8JvHlbMUk56uyGO5q0
+auth:            MD5-PW $1$N1Ty$HhJAQ3lcrviwdXQlqMEOm.
 mnt-by:          MNT-AS7000
 source:          MYDB
 
@@ -22,7 +22,7 @@ nic-hdl:         AS7000-EA
 source:          MYDB
 
 aut-num:         AS7000
-as-name:         Customer7000-AS 
+as-name:         ANY_NAME_FOR_AS-7000 
 remarks:         ***********************************
 remarks:         * Upstreams                       *
 remarks:         ***********************************

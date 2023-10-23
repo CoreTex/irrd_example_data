@@ -5,9 +5,9 @@ descr:           AS1000 Maintainer
 admin-c:         AS1000-EA
 upd-to:          admin@example.com
 remarks:         *************************************
-remarks:         * Maintainer Password: zfmltvqeielv *
+remarks:         * Maintainer Password: clhivlmwuozf *
 remarks:         *************************************
-auth:            MD5-PW $1$N7zH$RGKype6MWnpnZ1qTVC4CL1
+auth:            MD5-PW $1$TtFt$UsZhIgpT/74d9LqCSLeNF.
 mnt-by:          MNT-AS1000
 source:          MYDB
 
@@ -22,7 +22,7 @@ nic-hdl:         AS1000-EA
 source:          MYDB
 
 aut-num:         AS1000
-as-name:         Customer1000-AS 
+as-name:         ANY_NAME_FOR_AS-1000 
 descr:           AS1000: Multi-Homed without Behind-AS
 remarks:         ***********************************
 remarks:         * Upstreams                       *

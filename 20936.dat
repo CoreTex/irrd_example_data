@@ -5,9 +5,9 @@ descr:           AS20936 Maintainer
 admin-c:         AS20936-EA
 upd-to:          admin@example.com
 remarks:         *************************************
-remarks:         * Maintainer Password: lmcwcsmkgqor *
+remarks:         * Maintainer Password: pcjfjsflhiqf *
 remarks:         *************************************
-auth:            MD5-PW $1$jn3l$61g5T/5B854atc/1uAof/0
+auth:            MD5-PW $1$3SFn$XxuWE6JSeh9tX2iOHu3bw.
 mnt-by:          MNT-AS20936
 source:          MYDB
 
@@ -22,7 +22,7 @@ nic-hdl:         AS20936-EA
 source:          MYDB
 
 aut-num:         AS20936
-as-name:         Customer20936-AS 
+as-name:         ANY_NAME_FOR_AS-20936 
 remarks:         ***********************************
 remarks:         * Upstreams                       *
 remarks:         ***********************************

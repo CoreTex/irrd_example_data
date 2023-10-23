@@ -5,9 +5,9 @@ descr:           AS400 Maintainer
 admin-c:         AS400-EA
 upd-to:          admin@example.com
 remarks:         *************************************
-remarks:         * Maintainer Password: mvutnfkqullg *
+remarks:         * Maintainer Password: nilmpjptwrog *
 remarks:         *************************************
-auth:            MD5-PW $1$.Vnl$bv5oWBS04FCDWgkcEeuCI0
+auth:            MD5-PW $1$wUjS$MQ5Y7cpzqARbf9BWfe4r0/
 mnt-by:          MNT-AS400
 source:          MYDB
 
@@ -22,7 +22,7 @@ nic-hdl:         AS400-EA
 source:          MYDB
 
 aut-num:         AS400
-as-name:         Customer400-AS 
+as-name:         ANY_NAME_FOR_AS-400 
 descr:           AS400: Single-Homed without Behind-AS
 remarks:         ***********************************
 remarks:         * Upstreams                       *

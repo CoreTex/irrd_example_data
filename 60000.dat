@@ -5,9 +5,9 @@ descr:           AS60000 Maintainer
 admin-c:         AS60000-EA
 upd-to:          admin@example.com
 remarks:         *************************************
-remarks:         * Maintainer Password: ocmfhgezzvox *
+remarks:         * Maintainer Password: irrqrhfpfyrx *
 remarks:         *************************************
-auth:            MD5-PW $1$.iEs$gp9RcI1t4xRDQoVbz6k.o0
+auth:            MD5-PW $1$km5M$7rNe/0bA1rzk3StwuknQ8.
 mnt-by:          MNT-AS60000
 source:          MYDB
 
@@ -22,7 +22,7 @@ nic-hdl:         AS60000-EA
 source:          MYDB
 
 aut-num:         AS60000
-as-name:         Customer60000-AS 
+as-name:         ANY_NAME_FOR_AS-60000 
 descr:           AS60000: Single-Homed with Behind-AS
 remarks:         ***********************************
 remarks:         * Upstreams                       *

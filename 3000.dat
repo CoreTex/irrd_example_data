@@ -5,9 +5,9 @@ descr:           AS3000 Maintainer
 admin-c:         AS3000-EA
 upd-to:          admin@example.com
 remarks:         *************************************
-remarks:         * Maintainer Password: mygdnfndazsd *
+remarks:         * Maintainer Password: ckfubszuxvrm *
 remarks:         *************************************
-auth:            MD5-PW $1$JWqB$gqNkWiPtuJTVTBgGZbikT1
+auth:            MD5-PW $1$3k.r$/W2QkevUAjtMMD1LLzaYz.
 mnt-by:          MNT-AS3000
 source:          MYDB
 
@@ -22,7 +22,7 @@ nic-hdl:         AS3000-EA
 source:          MYDB
 
 aut-num:         AS3000
-as-name:         Customer3000-AS 
+as-name:         ANY_NAME_FOR_AS-3000 
 descr:           AS3000: Single-Homed without Behind-AS
 remarks:         ***********************************
 remarks:         * Upstreams                       *
